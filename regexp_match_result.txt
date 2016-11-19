@@ -1,0 +1,54 @@
+
+--------------------- Input text ----------------------
+To: George Shmidlap
+From: Rita Marlowe
+Subject: Will Success Spoil Rock Hunter?
+http://www.usgs.gov
+http://www.acl.lanl.gov/URI/archive/uri-archive.index.html
+ftp://@host.com/
+ftp://host.com/
+ftp://foo:@host.com/
+ftp://myname@host.dom/%2Fetc/motd
+file://vms.host.edu/disk$user/my/notes/note12345.txt
+prospero://host.dom//pros/name
+<A HREF="http://www.google.co.kr/?gfe_rd=cr&amp;ei=NvwsWLGhCoHM8gfujafgBQ">here</A>.
+
+
+--------------------- Pattern ----------------------
+.*((?<Protocol>http|ftp|file)://(?<Domain>[\w@][\w.:@]+)(/?[\w\.?=%&-@/$,]*)).*
+
+--------------------- Match results ----------------------
+Size : 5(The total number of '()'s in pattern.)
+m[0] = Whole input text.
+m[1] = Final Match result(The result of the first '()' in pattern).
+m[2] = Sub Match result(The result of the second '()' in pattern, (Protocol)).
+m[3] = Sub Match result(The result of the third '()' in pattern, (Domain)).
+m[4] = Sub Match result(The result of the fourth '()' in pattern, (parameters)).
+
+
+----------------------------------------------------------------
+# m.empty() : false
+# m[0] : 
+To: George Shmidlap
+From: Rita Marlowe
+Subject: Will Success Spoil Rock Hunter?
+http://www.usgs.gov
+http://www.acl.lanl.gov/URI/archive/uri-archive.index.html
+ftp://@host.com/
+ftp://host.com/
+ftp://foo:@host.com/
+ftp://myname@host.dom/%2Fetc/motd
+file://vms.host.edu/disk$user/my/notes/note12345.txt
+prospero://host.dom//pros/name
+<A HREF="http://www.google.co.kr/?gfe_rd=cr&amp;ei=NvwsWLGhCoHM8gfujafgBQ">here</A>.
+
+# m[1] : 
+http://www.google.co.kr/?gfe_rd=cr&amp;ei=NvwsWLGhCoHM8gfujafgBQ
+# m[2] : 
+http
+# m[3] : 
+www.google.co.kr
+# m[4] : 
+/?gfe_rd=cr&amp;ei=NvwsWLGhCoHM8gfujafgBQ
+
+

@@ -1,0 +1,12 @@
+To: George Shmidlap
+From: Rita Marlowe
+Subject: Will Success Spoil Rock Hunter?
+http://www.usgs.gov
+http://www.acl.lanl.gov/URI/archive/uri-archive.index.html
+ftp://@host.com/
+ftp://host.com/
+ftp://foo:@host.com/
+ftp://myname@host.dom/%2Fetc/motd
+file://vms.host.edu/disk$user/my/notes/note12345.txt
+prospero://host.dom//pros/name
+<A HREF="http://www.google.co.kr/?gfe_rd=cr&amp;ei=NvwsWLGhCoHM8gfujafgBQ">here</A>.
