@@ -1,3 +1,7 @@
+/*
+ *  From : http://en.cppreference.com/w/cpp/regex/regex_search
+ */
+
 #include <QCoreApplication>
 #include <iostream>
 #include <string>
